@@ -59,3 +59,5 @@ If you do not already have a [Github] account, create one now. Aim your browser 
 [libsndfile]: http://www.mega-nerd.com/libsndfile
 [MAT201B-2019]: https://github.com/kybr/MAT201B-2019
 [allolib]: https://github.com/AlloSphere-Research-Group/allolib
+[Atom]: https://atom.io
+[Code]: https://code.visualstudio.com
