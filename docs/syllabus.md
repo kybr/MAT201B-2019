@@ -12,8 +12,15 @@ This course is a hands-on introduction to developing interactive audiovisual app
 
 # Grading
 
-| 50% | Homework assignments and reading responses |
-| 50% | Final project milestones                   |
+-----------------------------------------------------
+
+ 50% Homework assignments and reading responses
+
+---- ------------------------------------------------
+
+ 50% Final project milestones                 
+
+-----------------------------------------------------
 
 # Final Project
 
@@ -21,8 +28,7 @@ Submit a final project in the form of an original, open source software project 
 
 # Schedule
 
-- Week 1-3:
-
+- Week 1-5: Programming homeworks and reading assignments
 + Week 4:
   * Present a 45-second in class "[elevator pitch](https://en.wikipedia.org/wiki/Elevator_pitch)" promoting your project
   * Meet with me for 30 minutes to workshop your project

@@ -31,16 +31,20 @@
 <h1 class="title">Getting Started</h1>
 <p class="byline">January 8, 2019 &ndash; Karl Yerkes</p>
 </header>
-<section id="macos" class="level1">
-<h1>macOS</h1>
+<section id="ready-your-computer" class="level1">
+<h1>Ready your computer</h1>
+<p>You will develop software in C++ on you personal machine. We need to prepare your machine for this task.</p>
+<section id="macos" class="level2">
+<h2>macOS</h2>
 <ul>
 <li>Install <em>Xcode</em>: Open the <em>App Store</em> app. Search for “xcode”. Install the first result. Wait for this to finish before moving on.</li>
 <li>Install <em><a href="https://brew.sh">Homebrew</a></em>: Open the <em>Terminal</em> app. Aim your browser at <a href="https://brew.sh" class="uri">https://brew.sh</a>. Copy and paste the text of the install command into the <em>Terminal</em> app.</li>
 <li>Use the <em>brew</em> command to install some software. In the <em>Terminal</em> app, run this command: <code>brew install git git-lfs cmake libsndfile graphviz doxygen</code>.</li>
+<li>Use the <em>brew</em> command to install [Atom] and [Code]. In the <em>Terminal</em> app, run this command: <code>brew cask install atom visual-studio-code</code></li>
 </ul>
 </section>
-<section id="windows" class="level1">
-<h1>Windows</h1>
+<section id="windows" class="level2">
+<h2>Windows</h2>
 <ul>
 <li>Install <em><a href="https://chocolatey.org">Chocolatey</a></em>: Aim your browser at <a href="https://chocolatey.org/install" class="uri">https://chocolatey.org/install</a>. Follow the directions there to install <em>Chocolatey</em>. Wait for this to finish before moving on.</li>
 <li>Use the <em>choco</em> command to install a C++ compiler. Open <em>cmd.exe</em> (<em>Command Prompt</em>) <strong>as administrator</strong> and run this command: <code>choco install -y visualstudio2017buildtools visualstudio2017-workload-vctools</code></li>
@@ -48,16 +52,32 @@
 <li>Install <em><a href="http://www.mega-nerd.com/libsndfile">libsndfile</a></em>: Aim your browser at <a href="http://www.mega-nerd.com/libsndfile/#Download" class="uri">http://www.mega-nerd.com/libsndfile/#Download</a>. Download and install the 64-bit version: <em>libsndfile-1.0.xx-w64-setup.exe</em>.</li>
 </ul>
 </section>
-<section id="ubuntu" class="level1">
-<h1>Ubuntu</h1>
+<section id="ubuntu" class="level2">
+<h2>Ubuntu</h2>
 <ul>
 <li>Install things: <code>sudo apt install build-essential git git-lfs cmake graphviz doxygen libsndfile1-dev</code></li>
 </ul>
-<hr />
 </section>
-<section id="create-a-github-repository" class="level1">
-<h1>Create a Github repository</h1>
-<p>If you do not already have a <a href="https://github.com">Github</a> account, create one now. Aim your browser at <a href="https://github.com" class="uri">https://github.com</a> and create an account. Once you have an account, create a repository called <em>MAT201B-yourname</em> where <em>yourname</em> is your name or nick name or internet handle or something.</p>
+</section>
+<section id="get-the-course-repository" class="level1">
+<h1>Get the course repository</h1>
+<p>You will work from a git repository (<a href="https://github.com/kybr/MAT201B-2019">MAT201B-2019</a>) containing examples, starter code, and a creative coding framework called <a href="https://github.com/AlloSphere-Research-Group/allolib">allolib</a>. Before you get this repository, think carefully about where on your computer you should keep materials related to this course. Once you have made that folder, get on a command line<span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">Windows users open <em>Git Bash</em>, not <em>Command Prompt</em>. macOS users open the <em>Terminal</em> app.<br />
+<br />
+</span></span> and execute these commands:</p>
+<pre><code>cd path/to/your/folder/for/this/class
+git clone https://github.com/kybr/MAT201B-2019
+cd MAT201B-2019
+git submodule update --init --recursive
+./allolib/run.sh allolib/examples/graphics/2D.cpp</code></pre>
+<p>Note that the first command will not work if you take it literally. You must decide for yourself what <em>path/to/your/folder/for/this/class</em> should be.</p>
+</section>
+<section id="create-your-github-repository" class="level1">
+<h1>Create your Github repository</h1>
+<p>If you do not already have a <a href="https://github.com">Github</a> account, create one now. Aim your browser at <a href="https://github.com" class="uri">https://github.com</a> and create an account. Once you have an account, create a repository called <em>MAT201B-yourname</em> where <em>yourname</em> is your name or nick name or internet handle or something. Once you have created your repository, get that repository onto your computer, using the command line:</p>
+<pre><code>cd path/to/your/folder/for/this/class
+cd MAT201B-2019
+git clone https://github.com/your-github-name/your-repository-name
+cd your-repository-name</code></pre>
 </section>
 </article>
 </body>
