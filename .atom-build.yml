@@ -1,0 +1,6 @@
+cmd: "./allolib/run.sh"
+atomCommandName: "AlloLib: ./allolib/run.sh FILE"
+name: "Compile and run single AlloLib file"
+args:
+  - "{FILE_ACTIVE}"
+keymap: cmd-b

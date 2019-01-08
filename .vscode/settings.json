@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "random": "cpp",
+    "__config": "cpp",
+    "__nullptr": "cpp",
+    "cstddef": "cpp",
+    "exception": "cpp",
+    "initializer_list": "cpp",
+    "stdexcept": "cpp",
+    "type_traits": "cpp",
+    "typeinfo": "cpp",
+    "algorithm": "cpp",
+    "bitset": "cpp",
+    "set": "cpp",
+    "queue": "cpp",
+    "vector": "cpp"
+  },
+  "editor.formatOnSave": true,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+}

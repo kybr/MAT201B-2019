@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/usr/local/include",
+                "/usr/include",
+                "${workspaceRoot}/allolib/include",
+                "${workspaceRoot}/allolib/include/al",
+                "${workspaceRoot}/allolib/include/util",
+                "${workspaceRoot}/allolib/external/imgui",
+                "${workspaceRoot}/allolib/external/",
+                "${workspaceRoot}/allolib/external/Gamma/Gamma/",
+                "${workspaceRoot}/allolib/external/Gamma/"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/local/include",
+                    "/usr/include",
+                    "${workspaceRoot}/allolib",
+                    "${workspaceRoot}/allolib/include/al",
+                    "${workspaceRoot}/allolib/include/util",
+                    "${workspaceRoot}/allolib/external/imgui",
+                    "${workspaceRoot}/allolib/external/",
+                    "${workspaceRoot}/allolib/external/Gamma/Gamma/",
+                    "${workspaceRoot}/allolib/external/Gamma/"
+                ]
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
+        }
+    ],
+    "version": 4
+}
