@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Karl Yerkes">
+  <meta name="dcterms.date" content="2019-01-08">
+  <title>Getting Started</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="latex.css">
+  <link rel="stylesheet" href="pandoc-solarized.css">
+  <link rel="stylesheet" href="pandoc.css">
+  <link rel="stylesheet" href="tufte-extra.css">
+  <link rel="stylesheet" href="tufte.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<article>
+<header>
+<h1 class="title">Getting Started</h1>
+<p class="byline">January 8, 2019 &ndash; Karl Yerkes</p>
+</header>
+<section id="macos" class="level1">
+<h1>macOS</h1>
+<ul>
+<li>Install <em>Xcode</em>: Open the <em>App Store</em> app. Search for “xcode”. Install the first result. Wait for this to finish before moving on.</li>
+<li>Install <em><a href="https://brew.sh">Homebrew</a></em>: Open the <em>Terminal</em> app. Aim your browser at <a href="https://brew.sh" class="uri">https://brew.sh</a>. Copy and paste the text of the install command into the <em>Terminal</em> app.</li>
+<li>Use the <em>brew</em> command to install some software. In the <em>Terminal</em> app, run this command: <code>brew install git git-lfs cmake libsndfile graphviz doxygen</code>.</li>
+</ul>
+</section>
+<section id="windows" class="level1">
+<h1>Windows</h1>
+<ul>
+<li>Install <em><a href="https://chocolatey.org">Chocolatey</a></em>: Aim your browser at <a href="https://chocolatey.org/install" class="uri">https://chocolatey.org/install</a>. Follow the directions there to install <em>Chocolatey</em>. Wait for this to finish before moving on.</li>
+<li>Use the <em>choco</em> command to install a C++ compiler. Open <em>cmd.exe</em> (<em>Command Prompt</em>) <strong>as administrator</strong> and run this command: <code>choco install -y visualstudio2017buildtools visualstudio2017-workload-vctools</code></li>
+<li>Use the <em>choco</em> command to install some software. Open <em>cmd.exe</em> (<em>Command Prompt</em>) <strong>as administrator</strong> and run this command: <code>choco install -y git git-lfs cmake graphviz doxygen atom vscode</code></li>
+<li>Install <em><a href="http://www.mega-nerd.com/libsndfile">libsndfile</a></em>: Aim your browser at <a href="http://www.mega-nerd.com/libsndfile/#Download" class="uri">http://www.mega-nerd.com/libsndfile/#Download</a>. Download and install the 64-bit version: <em>libsndfile-1.0.xx-w64-setup.exe</em>.</li>
+</ul>
+</section>
+<section id="ubuntu" class="level1">
+<h1>Ubuntu</h1>
+<ul>
+<li>Install things: <code>sudo apt install build-essential git git-lfs cmake graphviz doxygen libsndfile1-dev</code></li>
+</ul>
+<hr />
+</section>
+<section id="create-a-github-repository" class="level1">
+<h1>Create a Github repository</h1>
+<p>If you do not already have a <a href="https://github.com">Github</a> account, create one now. Aim your browser at <a href="https://github.com" class="uri">https://github.com</a> and create an account. Once you have an account, create a repository called <em>MAT201B-yourname</em> where <em>yourname</em> is your name or nick name or internet handle or something.</p>
+</section>
+</article>
+</body>
+</html>
