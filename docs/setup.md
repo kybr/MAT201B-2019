@@ -18,9 +18,9 @@ You will develop software in C++ on you personal machine. We need to prepare you
 ## Windows
 
 - Install _[Chocolatey]_: Aim your browser at <https://chocolatey.org/install>. Follow the directions there to install _Chocolatey_. Wait for this to finish before moving on.
-- Use the _choco_ command to install a C++ compiler. Open _cmd.exe_ (_Command Prompt_) **as administrator** and run this command: `choco install -y visualstudio2017buildtools visualstudio2017-workload-vctools`
-- Use the _choco_ command to install some software. Open _cmd.exe_ (_Command Prompt_) **as administrator** and run this command: `choco install -y git git-lfs cmake graphviz doxygen atom vscode`
+- Use the _choco_ command to install some software. Open _cmd.exe_ (_Command Prompt_) **as administrator** and run this command: `choco install -y git git-lfs cmake graphviz doxygen.install atom vscode`
 - Install _[libsndfile]_: Aim your browser at <http://www.mega-nerd.com/libsndfile/#Download>. Download and install the 64-bit version: _libsndfile-1.0.xx-w64-setup.exe_.
+- Use the _choco_ command to install a C++ compiler. Open _cmd.exe_ (_Command Prompt_) **as administrator** and run this command: `choco install -y visualstudio2017buildtools visualstudio2017-workload-vctools`
 
 ## Ubuntu
 
