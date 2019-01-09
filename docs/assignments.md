@@ -14,7 +14,7 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 </section>
 
-## Assignment 0
+## Assignment 0 | Due 2019-01-14 by 1700
 
 Read and study the first two chapters of _Fundamentals of Computer Graphics_ (2016 Marschner & Shirley).
 
