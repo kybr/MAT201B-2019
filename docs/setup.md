@@ -1,7 +1,5 @@
 ---
 title: Getting Started
-author: Karl Yerkes
-date: 'January 8, 2019'
 ---
 
 # Ready your computer

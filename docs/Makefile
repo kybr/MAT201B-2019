@@ -11,6 +11,7 @@ _: index.html assignments.html setup.html syllabus.html
 		--section-divs \
 		--from markdown+tex_math_single_backslash \
 		--to html5+smart \
+		--include-before-body html.header \
 		--template=tufte \
 		--css latex.css \
 		--css pandoc-solarized.css \

@@ -1,7 +1,5 @@
 ---
 title: Assignments
-author: Karl Yerkes
-date: 'January 8, 2019'
 ---
 
 <section>
