@@ -1,9 +1,6 @@
 #include "al/core.hpp"
 using namespace al;
 
-#include "synths.h"
-using namespace diy;
-
 #include "processing.h"
 using namespace processing;
 
