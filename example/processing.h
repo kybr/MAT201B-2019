@@ -5,6 +5,10 @@
 
 namespace processing {
 
+float map(float value, float low, float high, float Low, float High) {
+  return Low + (High - Low) * ((value - low) / (high - low));
+}
+
 Graphics* g{nullptr};
 void initialize(Graphics& G) { g = &G; }
 
