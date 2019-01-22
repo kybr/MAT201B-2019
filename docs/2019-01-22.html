@@ -38,7 +38,7 @@
 <ul>
 <li>New homework and reading assignment</li>
 <li>Using <code>git</code> to develop and turn in homework</li>
-<li></li>
+<li><code>Vec3f</code>, <code>onKeyPressed()</code>, <code>Mesh</code></li>
 </ul>
 <section id="assignment-1" class="level2">
 <h2>Assignment 1</h2>
@@ -47,26 +47,18 @@
 <section id="git" class="level2">
 <h2><code>git</code></h2>
 <ul>
-<li><code>git status</code></li>
-<li><code>git pull</code>
-<ul>
-<li><code>git submodule update --init --recursive</code></li>
-</ul></li>
-<li><code>git add</code></li>
-<li><code>git commit -am "commit message"</code></li>
+<li><code>git status</code> ### Tell <code>git</code> who you are…</li>
 </ul>
-<section id="tell-git-who-you-are" class="level3">
-<h3>Tell <code>git</code> who you are…</h3>
 <p>Try this on the command line:</p>
 <pre><code>git config --global user.name</code></pre>
 <p>…and then this:</p>
 <pre><code>git config --global user.email</code></pre>
 <p>Now please <a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/">Tell <code>git</code> who you are</a>…</p>
 <pre><code>git config --global user.name &quot;Frank Zappa&quot;
-git config --global user.email &quot;frank.zappa@gmail.com</code></pre>
-</section>
+git config --global user.email &quot;frank.zappa@gmail.com&quot;</code></pre>
 <section id="tell-git-to-ignore-certain-files" class="level3">
 <h3>Tell <code>git</code> to ignore certain files</h3>
+<pre><code>cd path/to/MAT201B-2019/your-repository</code></pre>
 <p>Edit <code>.gitignore</code>…</p>
 </section>
 <section id="install-git-lfs-and-track-binary-files" class="level3">
@@ -79,6 +71,10 @@ git lfs track &#39;*.wav&#39;</code></pre>
 </section>
 <section id="add-a-new-file" class="level3">
 <h3>Add a new file</h3>
+<ul>
+<li><code>git add</code></li>
+<li><code>git commit -am "commit message"</code></li>
+</ul>
 </section>
 <section id="get-updates-to-the-course" class="level3">
 <h3>Get updates to the course…</h3>
