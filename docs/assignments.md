@@ -18,7 +18,7 @@ Read, study, and report on chapters 5, 6, and 7 of _Fundamentals of Computer Gra
 
 Write an allolib program that arranges "pixels" in 3D space according to various systems:
 
-1. Load an image from a file; You choose the image. Pick a colorful image that is smaller than 1000x1000.
+1. Load an image from a file; You choose the image, but it must be a .jpg or .png file. Pick a colorful image that is smaller than 1000x1000.
 2. Using the pixel colors from that image, generate a Mesh of points.
 3. Allow the user to organize the mesh vertices in 3D using keyboard interaction:
   - `1` returns the points to the row/column positions of each pixel in the original image.
@@ -29,13 +29,13 @@ Write an allolib program that arranges "pixels" in 3D space according to various
 
 For the software above, while you are developing, your files and folders should look like this:
 
-    MAT201B-2019/your-repo-name/color_spaces/color_spaces.cpp
-    MAT201B-2019/your-repo-name/color_spaces/color_spaces.jpg
+    MAT201B-2019/your-repo-name/assignments/color_spaces.cpp
+    MAT201B-2019/your-repo-name/assignments/color_spaces.jpg
 
 To turn in your software, you must create a repository on github.com named mat201b. Once that is done, add and commit your work to that repository. The files in that repository should look like this:
 
-    color_spaces/color_spaces.cpp
-    color_spaces/your_image_file.jpg
+    assignments/color_spaces.cpp
+    assignments/color_spaces.jpg
 
 Frequently commit and push your code to your repository.
 
