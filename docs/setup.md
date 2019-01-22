@@ -40,6 +40,15 @@ You will work from a git repository ([MAT201B-2019]) containing examples, starte
 
 Note that the first command will not work if you take it literally. You must decide for yourself what _path/to/your/folder/for/this/class_ should be.
 
+**To get updates** to the course repository, we say on the Terminal:
+
+    cd path/to/MAT201B-2019
+    git pull
+    git submodule update --init --recursive
+
+The first command ensures that _MAT201B-2019_ is the current working directory and the second command synchronizes your local repository with the one on Github. The final command above gets changes _recursively_ all submodules of _MAT201B-2019_. This is necessary when I change allolib
+
+
 
 # Create your Github repository
 

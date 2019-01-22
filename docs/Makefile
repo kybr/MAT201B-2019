@@ -1,6 +1,7 @@
 .SUFFIXES:
 
-_: index.html assignments.html setup.html syllabus.html
+_: index.html assignments.html setup.html syllabus.html 2019-01-22.html
+
 
 %.html: %.md tufte.html5 $(STYLES)
 	pandoc \

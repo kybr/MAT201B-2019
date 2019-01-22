@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>2019-01-22</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="latex.css">
+  <link rel="stylesheet" href="pandoc-solarized.css">
+  <link rel="stylesheet" href="pandoc.css">
+  <link rel="stylesheet" href="tufte-extra.css">
+  <link rel="stylesheet" href="tufte.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div>
+<a href="index.html">Home</a> 
+<a href="assignments.html">Assignments</a> 
+<a href="setup.html">Setup</a> 
+<a href="syllabus.html">Syllabus</a> 
+</div>
+<article>
+<header>
+<h1 class="title">2019-01-22</h1>
+</header>
+<p>Today’s topics include:</p>
+<ul>
+<li>New homework and reading assignment</li>
+<li>Using <code>git</code> to develop and turn in homework</li>
+<li></li>
+</ul>
+<section id="assignment-1" class="level2">
+<h2>Assignment 1</h2>
+<p>See <a href="assignments.html">assignments</a></p>
+</section>
+<section id="git" class="level2">
+<h2><code>git</code></h2>
+<ul>
+<li><code>git status</code></li>
+<li><code>git pull</code>
+<ul>
+<li><code>git submodule update --init --recursive</code></li>
+</ul></li>
+<li><code>git add</code></li>
+<li><code>git commit -am "commit message"</code></li>
+</ul>
+<section id="tell-git-who-you-are" class="level3">
+<h3>Tell <code>git</code> who you are…</h3>
+<p>Try this on the command line:</p>
+<pre><code>git config --global user.name</code></pre>
+<p>…and then this:</p>
+<pre><code>git config --global user.email</code></pre>
+<p>Now please <a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/">Tell <code>git</code> who you are</a>…</p>
+<pre><code>git config --global user.name &quot;Frank Zappa&quot;
+git config --global user.email &quot;frank.zappa@gmail.com</code></pre>
+</section>
+<section id="tell-git-to-ignore-certain-files" class="level3">
+<h3>Tell <code>git</code> to ignore certain files</h3>
+<p>Edit <code>.gitignore</code>…</p>
+</section>
+<section id="install-git-lfs-and-track-binary-files" class="level3">
+<h3>Install <code>git-lfs</code> and track binary files</h3>
+<pre><code>cd path/to/MAT201B-2019/your-repository
+git lfs install
+git lfs track &#39;*.jpg&#39;
+git lfs track &#39;*.png&#39;
+git lfs track &#39;*.wav&#39;</code></pre>
+</section>
+<section id="add-a-new-file" class="level3">
+<h3>Add a new file</h3>
+</section>
+<section id="get-updates-to-the-course" class="level3">
+<h3>Get updates to the course…</h3>
+<p>You must execute both of these commands from the course repository<span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">Say <code>cd path/to/MAT201B-2019</code> or find some other way to set the <a href="http://www.linfo.org/current_directory.html">current working directory</a> to the course repository.<br />
+<br />
+</span></span>:</p>
+<pre><code>git pull
+git submodule update --init --recursive</code></pre>
+</section>
+</section>
+</article>
+</body>
+</html>

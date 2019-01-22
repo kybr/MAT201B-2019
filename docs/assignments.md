@@ -12,6 +12,34 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 </section>
 
+## Assignment 1 | Due 2019-01-28 by 1700
+
+Read, study, and report on chapters 5, 6, and 7 of _Fundamentals of Computer Graphics_ (2016 Marschner & Shirley).
+
+Write an allolib program that arranges "pixels" in 3D space according to various systems:
+
+1. Load an image from a file; You choose the image. Pick a colorful image that is smaller than 1000x1000.
+2. Using the pixel colors from that image, generate a Mesh of points.
+3. Allow the user to organize the mesh vertices in 3D using keyboard interaction:
+  - `1` returns the points to the row/column positions of each pixel in the original image.
+  - `2` places each point in an [RGB color space](https://en.wikipedia.org/wiki/RGB_color_space) "Cube" according to its color.
+  - `3` builds an [HSV color space](https://en.wikipedia.org/wiki/HSL_and_HSV) "Cylinder" with the points.
+  - `4` organizes the points according to your own aesthetic goals; Pick some good ones. Make something interesting!
+4. Animate the transitions between each of the organization states above. Each pixel should take 1 second to move to its new location at a constant velocity.
+
+For the software above, while you are developing, your files and folders should look like this:
+
+    MAT201B-2019/your-repo-name/color_spaces/color_spaces.cpp
+    MAT201B-2019/your-repo-name/color_spaces/color_spaces.jpg
+
+To turn in your software, you must create a repository on github.com named mat201b. Once that is done, add and commit your work to that repository. The files in that repository should look like this:
+
+    color_spaces/color_spaces.cpp
+    color_spaces/your_image_file.jpg
+
+Frequently commit and push your code to your repository.
+
+
 ## Assignment 0 | Due 2019-01-14 by 1700
 
 Read and study the first two chapters of _Fundamentals of Computer Graphics_ (2016 Marschner & Shirley).

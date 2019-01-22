@@ -73,6 +73,11 @@ cd MAT201B-2019
 git submodule update --init --recursive
 ./allolib/run.sh allolib/examples/graphics/2D.cpp</code></pre>
 <p>Note that the first command will not work if you take it literally. You must decide for yourself what <em>path/to/your/folder/for/this/class</em> should be.</p>
+<p><strong>To get updates</strong> to the course repository, we say on the Terminal:</p>
+<pre><code>cd path/to/MAT201B-2019
+git pull
+git submodule update --init --recursive</code></pre>
+<p>The first command ensures that <em>MAT201B-2019</em> is the current working directory and the second command synchronizes your local repository with the one on Github. The final command above gets changes <em>recursively</em> all submodules of <em>MAT201B-2019</em>. This is necessary when I change allolib</p>
 </section>
 <section id="create-your-github-repository" class="level1">
 <h1>Create your Github repository</h1>
