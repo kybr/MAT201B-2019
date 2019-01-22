@@ -2,7 +2,7 @@
 using namespace al;
 
 struct MyApp : App {
-  // onCreate is called before anything elseand is only called one time
+  // onCreate is called before anything else and is only called one time
   void onCreate() override {
     // put things here that you can to setup
 
@@ -45,9 +45,12 @@ struct MyApp : App {
   }
 
   // onSound is called over and over at ~80-500 Hz
+  double phase = 0;
   void onSound(AudioIOData& io) override {
     while (io()) {
-      float s = 0;
+      phase += 0.003;
+      if (phase > 1) phase -= 2;
+      float s = phase;
       if (shouldClick) {
         shouldClick = false;
         s = 1;

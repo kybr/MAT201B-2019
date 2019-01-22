@@ -14,8 +14,8 @@ struct MyApp : App {
   }
 
   void onDraw(Graphics& g) override {
-    g.clear(0.25);
-    g.camera(Viewpoint::ORTHO_FOR_2D);
+    g.clear(0.25); // background(64);
+    g.camera(Viewpoint::ORTHO_FOR_2D); // 2d drawing
 
     initialize(g);
     noStroke();
