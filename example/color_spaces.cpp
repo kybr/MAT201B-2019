@@ -18,13 +18,16 @@ struct MyApp : App {
       exit(1);
     }
 
+    nav().pullBack(7);
+
     Image::RGBAPix<uint8_t> pixel;
     for (int row = 0; row < image.height(); row++) {
       for (int column = 0; column < image.width(); column++) {
         image.read(pixel, column, row);  // read pixel data
-        mesh.vertex(column / image.width(), row / image.width(), 0);
-        position[0].push_back(
-            Vec3f(column / image.width(), row / image.width(), 0));
+        float x = (float)column / image.width() - 0.5;
+        float y = (float)row / image.width() - 0.5;
+        mesh.vertex(x, y, 0);
+        position[0].push_back(Vec3f(x, y, 0));
         mesh.color(pixel.r / 256.0, pixel.g / 256.0, pixel.b / 256.0);
       }
     }
@@ -46,7 +49,7 @@ struct MyApp : App {
     // http://paulbourke.net/miscellaneous/interpolation/
 
     // animate the positions of the mesh vertices
-    auto& vertexList = mesh.vertices();
+    // auto& vertexList = mesh.vertices();
     // for each vertex in the list above
     // interpolate (linear) between 'last' and 'target'
   }
