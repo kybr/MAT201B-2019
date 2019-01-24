@@ -3,6 +3,9 @@
         {
             "name": "Mac",
             "includePath": [
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
                 "/usr/local/include",
                 "/usr/include",
                 "${workspaceRoot}/allolib/include",
@@ -14,18 +17,11 @@
                 "${workspaceRoot}/allolib/external/Gamma/"
             ],
             "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
             "browse": {
-                "path": [
-                    "/usr/local/include",
-                    "/usr/include",
-                    "${workspaceRoot}/allolib",
-                    "${workspaceRoot}/allolib/include/al",
-                    "${workspaceRoot}/allolib/include/util",
-                    "${workspaceRoot}/allolib/external/imgui",
-                    "${workspaceRoot}/allolib/external/",
-                    "${workspaceRoot}/allolib/external/Gamma/Gamma/",
-                    "${workspaceRoot}/allolib/external/Gamma/"
-                ]
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
             },
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
