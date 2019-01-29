@@ -9,4 +9,5 @@ This course is a hands-on introduction to developing interactive audiovisual app
 
 </section>
 
+[2019-01-29](2019-01-29.html)
 [2019-01-22](2019-01-22.html)

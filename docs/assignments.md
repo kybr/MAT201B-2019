@@ -12,6 +12,10 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 </section>
 
+## Assignment X | Due always
+
+Study the examples in allolib. For each example in the `allolib/examples` folder, build and run the example, observe the output, and study the source code. Make lists of notes and questions to submit to me. If there is no assignment currently pending, then this is your assignment.
+
 ## Assignment 1 | Due 2019-01-28 by 1700
 
 Read, study, and report on chapters 5, 6, and 7 of _Fundamentals of Computer Graphics_ (2016 Marschner & Shirley).
