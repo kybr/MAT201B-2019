@@ -32,26 +32,39 @@ struct MyApp : App {
       }
     }
 
-    // you initialize...
-    // position[1]
-    // position[2]
-    // position[3]
+    for (const Color& c : mesh.colors())
+      position[1].push_back(Vec3f(c.r, c.g, c.b) - Vec3f(0.5, 0.5, 0.5));
+    // position[1].push_back(Vec3f(c.r - 0.5, c.g - 0.5, c.b - 0.5));
+
+    const auto& c = mesh.colors();
+    for (int i = 0; i < c.size(); ++i) {
+      HSV color(c[i]);  // "convert" to HSV from RGB
+      Vec3f v;
+      // convert from polar to cartesian
+      v.x = color.s * sin(M_2PI * color.h);
+      v.y = color.s * cos(M_2PI * color.h);
+      v.z = color.v;
+      position[2].push_back(v);
+    }
+    for (int i = 0; i < c.size(); ++i)
+      position[3].push_back(
+          Vec3f(rnd::uniformS(), rnd::uniformS(), rnd::uniformS()));
   }
 
-  int target, last;  // use like position[target] or position[last]
+  int target = 0;
+  int previousTarget =
+      0;  // use like position[target] or position[previousTarget]
 
-  double timer = 0;
+  // previousTarget was named last
+
+  double t = 0;
   void onAnimate(double dt) override {
-    // dt is in seconds
-    timer += dt;
-    // timer is now the amount of time (in seconds) since the program started
-
-    // http://paulbourke.net/miscellaneous/interpolation/
-
-    // animate the positions of the mesh vertices
-    // auto& vertexList = mesh.vertices();
-    // for each vertex in the list above
-    // interpolate (linear) between 'last' and 'target'
+    t += dt;
+    if (t > 0 && t < 1) {
+      auto& m = mesh.vertices();
+      for (int i = 0; i < m.size(); ++i)
+        m[i] = position[previousTarget][i] * (1 - t) + position[target][i] * t;
+    }
   }
 
   void onDraw(Graphics& g) override {
@@ -63,12 +76,24 @@ struct MyApp : App {
   void onKeyDown(const Keyboard& k) override {
     if (k.key() == '1') {
       // start process of animating to position[0]
+      t = 0;
+      previousTarget = target;
+      target = 0;
     } else if (k.key() == '2') {
       // start process of animating to position[1]
+      t = 0;
+      previousTarget = target;
+      target = 1;
     } else if (k.key() == '3') {
       // start process of animating to position[2]
+      t = 0;
+      previousTarget = target;
+      target = 2;
     } else if (k.key() == '4') {
       // start process of animating to position[3]
+      t = 0;
+      previousTarget = target;
+      target = 3;
     }
   }
 };
