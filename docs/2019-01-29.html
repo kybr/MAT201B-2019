@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>2019-01-29</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="latex.css">
+  <link rel="stylesheet" href="pandoc-solarized.css">
+  <link rel="stylesheet" href="pandoc.css">
+  <link rel="stylesheet" href="tufte-extra.css">
+  <link rel="stylesheet" href="tufte.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div>
+<a href="index.html">Home</a> 
+<a href="assignments.html">Assignments</a> 
+<a href="setup.html">Setup</a> 
+<a href="syllabus.html">Syllabus</a> 
+</div>
+<article>
+<header>
+<h1 class="title">2019-01-29</h1>
+</header>
+<p>Homework solution…</p>
+<pre id="lst:vec"><code>  // we can do arithmetic with vectors
+  Vec3f a(1, 0, 0), b(0, 1, 0);
+  cout &lt;&lt; &quot;a:&quot; &lt;&lt; a &lt;&lt; endl;
+  cout &lt;&lt; &quot;b:&quot; &lt;&lt; b &lt;&lt; endl;
+  cout &lt;&lt; (a + b) &lt;&lt; endl;
+
+  // this includes scaling
+  cout &lt;&lt; &quot;a*0.1:&quot; &lt;&lt; a * 0.1 &lt;&lt; endl;
+  cout &lt;&lt; &quot;(a+b)*0.1:&quot; &lt;&lt; (a + b) * 0.1 &lt;&lt; endl;
+
+  for (float t = 0; t &lt; 1; t += 0.099)
+    cout &lt;&lt; &quot;t:&quot; &lt;&lt; a * (1 - t) + b * t &lt;&lt; endl;</code></pre>
+</article>
+</body>
+</html>

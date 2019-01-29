@@ -1,6 +1,6 @@
 .SUFFIXES:
 
-_: index.html assignments.html setup.html syllabus.html 2019-01-22.html
+_: index.html assignments.html setup.html syllabus.html 2019-01-22.html 2019-01-29.html
 
 
 %.html: %.md tufte.html5 $(STYLES)
