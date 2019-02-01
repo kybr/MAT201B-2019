@@ -12,6 +12,14 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 </section>
 
+## Assignment 2 | Due 2019-02-04 by 1700
+
+Study and work along with chapters 1 and 2 of [_The Nature of Code_] by Daniel Shiffman. Use [_Processing_]. Study [mass-spring-two-dimension.cpp] and try to add a fourth Mass and a fourth Spring.
+
+[_The Nature of Code_]: https://natureofcode.com
+[_Processing_]: https://processing.org
+[mass-spring-two-dimension.cpp]: https://github.com/kybr/MAT201B-2019/blob/master/example/mass-spring-two-dimension.cpp
+
 ## Assignment X | Due always
 
 Study the examples in allolib. For each example in the `allolib/examples` folder, build and run the example, observe the output, and study the source code. Make lists of notes and questions to submit to me. If there is no assignment currently pending, then this is your assignment.
