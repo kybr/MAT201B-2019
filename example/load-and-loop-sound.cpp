@@ -5,10 +5,10 @@ using namespace al;
 using namespace gam;
 
 struct MyApp : App {
-  SamplePlayer<float, gam::ipl::Linear, phsInc::Loop> samplePlayer;
+  gam::SamplePlayer<float, gam::ipl::Linear, gam::phsInc::Loop> samplePlayer;
 
   void onCreate() override {
-    samplePlayer.load("../8.wav");
+    samplePlayer.load("../sound/8.wav");
     samplePlayer.loop();
     Sync::master().spu(audioIO().fps());
   }

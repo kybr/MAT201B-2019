@@ -15,13 +15,15 @@ struct MyApp : App {
   SamplePlayer<float, gam::ipl::Linear, phsInc::Loop> samplePlayer;
 
   void onCreate() override {
-    samplePlayer.load("../8.wav");
-    samplePlayer.loop();
+    samplePlayer.load("../sound/8.wav");
     Sync::master().spu(audioIO().fps());
   }
 
   void onSound(AudioIOData& io) override {
     while (io()) {
+      float mic = io.in(0) + io.in(1);
+      // do something with the mic!
+
       float s = samplePlayer();
       if (stft(s)) {
         for (int i = 0; i < stft.numBins(); ++i) {
