@@ -8,9 +8,33 @@ For each reading assignment, write one page describing your experience[^your_exp
 
 [^your_experience]: Answer this question: What is most important thing for _you_ to say about this reading? Was the reading useless?
 
-For each programming assignment, submit your code by pushing it to your [Github] repository for this class. Unless the assignment specifies otherwise, submit your programming assignment solution as a single _.cpp_ placed in a folder named _assignement_.
+For each programming assignment, submit your code by pushing it to your [Github] repository for this class. Unless the assignment specifies otherwise, submit your programming assignment solution as a single _.cpp_ placed in a folder named _assignment_.
 
 </section>
+
+## Assignment 3 | Due 2019-02-13 by 1700
+
+Implement a particle system starting with the example _allolib/examples/graphics/point-cloud-geometry-shader-texture-sprite.cpp_.
+
+1. Copy the starter code to a file named _particles-p1.cpp_. Implement a stable[^stability] particle system based on _[Newton's law of universal gravitation]_ where all particles have a mass of 1.
+2. Copy the file _particles-p1.cpp_ to _particles-p2.cpp_. Implement a stable particle system that uses mass relationships like those found in our solar system[^behaviour]. Refer to [List of Solar System objects]. You do not have to use the exact mass numbers, but there should be only 1 very, very large mass (like the sun), only a few very large masses (like planets), and more medium masses (moons), and many small masses (comets).
+3. Copy the file _particles-p2.cpp_ to _particles-p3.cpp_. Introduce a GUI-controlled parameter that reduces the [symmetry] of the gravitational forces, making them gradually asymmetrical. Gravity acts on each pair of particles in an "equal by opposite" way: if $a$ attracts $b$ by $F$ amount, then $b$ attracts $a$ by $F$ amount. If instead, $a$ attracts $b$ by $F$ while $b$ attracts $a$ by $F/2$, then the forces are not equal and opposite; They are asymmetrical. What happens?
+4. Copy the file _particles-p3.cpp_ to _particles-p4.cpp_. Start with one of the systems above. Create your own twist on the system. Make something different and interesting.
+
+[^stability]: A stable system is one where most of the particles stay clustered together. If the system is not stable, then many particles will fly away, far from view. There are many strategies to achieve stability. Tune parameters such as time step (smaller is more stable), viscous drag (larger is more stable), and the gravitational constant. Limit large forces.
+
+[^behaviour]: There is a reason why our solar system seems stable. The mass relationships between celestial bodies largely determine how the system behaves as a whole. Here we find another way to achieve stability: mimic a real, stable system.
+
+[Newton's law of universal gravitation]: https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation
+[List of Solar System objects]: https://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size
+[symmetry]: https://en.wikipedia.org/wiki/Symmetry
+
+In completing this assignment, you will face some challenges: collisions, large forces, keeping objects in view, and issues with scale. Here are a few hints.
+
+When particles come very close to one another, the gravitational force between them becomes *very* large. These particles will fly apart *very* quickly and move out of the volume of the camera. You will never see them again. You may limit large forces: 1) decide on a global maximum force value and 2) if any force is larger than the maximum value, limit that force to the maximum value. Alternatively or in addition, you may implement "collisions". When a pair of particles comes close to one another, make them bounce off one another.
+
+While your system is running, ideally most of the particles are "in frame"---That is, they are between the near and far clipping planes of the camera and the whole system in within the volume of the camera. To keep them in the frame, we can dynamically adjust the near and far clipping planes, point the camera at the center of the system, scale the system up or down, and/or tame the system itself by "respawning" particles that go out of frame or using a global gravity to keep the system together.
+
 
 ## Assignment 2 | Due 2019-02-04 by 1700
 
