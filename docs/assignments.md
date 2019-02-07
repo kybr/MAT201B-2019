@@ -14,7 +14,7 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 ## Assignment 3 | Due 2019-02-13 by 1700
 
-Implement a particle system starting with the example _allolib/examples/graphics/point-cloud-geometry-shader-texture-sprite.cpp_.
+Implement a particle system starting with _example/particles-p0.cpp_:
 
 1. Copy the starter code to a file named _particles-p1.cpp_. Implement a stable[^stability] particle system based on _[Newton's law of universal gravitation]_ where all particles have a mass of 1.
 2. Copy the file _particles-p1.cpp_ to _particles-p2.cpp_. Implement a stable particle system that uses mass relationships like those found in our solar system[^behaviour]. Refer to [List of Solar System objects]. You do not have to use the exact mass numbers, but there should be only 1 very, very large mass (like the sun), only a few very large masses (like planets), and more medium masses (moons), and many small masses (comets).
