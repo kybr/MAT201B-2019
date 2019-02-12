@@ -80,7 +80,6 @@ struct MyApp : App {
     mass[3].set(0, 1.1);
     mass[3].mass = 0.17;
 
-    spring.push_back({mouse, mass[0], 0.1, 150});
     spring.push_back({mass[0], mass[1], 1, 200});
     spring.push_back({mass[1], mass[2], 1, 300});
     spring.push_back({mass[2], mass[0], 1, 200});
@@ -182,15 +181,21 @@ struct MyApp : App {
     mouse.set(transform(Vec2f(m.x(), m.y())));
   }
 
+  bool draggingMass = false;
   void onMouseDown(const Mouse& m) override {
     for (Mass& M : mass) {
       Vec2f t = transform(Vec2f(m.x(), m.y()));
       if ((M - t).mag() < M.mass) {
-        // its a hit!
-        cout << "its a hit" << endl;
-        // connect a spring between this mass and the mouse mass
+        spring.push_back({M, mouse, 0, 25});
+        draggingMass = true;
       }
     }
+  }
+  void onMouseUp(const Mouse& m) override {
+    //
+    if (draggingMass)  //
+      spring.pop_back();
+    draggingMass = false;
   }
 };
 

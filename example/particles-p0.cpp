@@ -100,6 +100,10 @@ struct AlloApp : App {
   ShaderProgram shader;
   Texture texture;
 
+  // simulation parameters
+  double timeStep = 0.001;
+  double dragFactor = 0.05;
+
   Mesh pointMesh;          // holds positions
   vector<float> mass;      // holds masses
   vector<Vec3f> velocity;  // holds velocities
@@ -139,6 +143,7 @@ struct AlloApp : App {
 
     // put your setup code here
     //
+    // you need to initialize velocities
   }
 
   void onAnimate(double dt) override {
@@ -159,6 +164,11 @@ struct AlloApp : App {
       for (int j = 1 + i; j < vertex.size(); ++j) {
         Vec3f& a(vertex[i]);  // alias
         Vec3f& b(vertex[j]);  // alias
+
+        // mass of i is mass[i]
+        // mass of j is mass[j]
+        // velocity of a is velocity[i]
+        // velocity of b is velocity[j]
 
         // Fij =    G * Mi * Mj
         //       ---------------- * Uij
