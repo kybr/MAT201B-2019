@@ -12,6 +12,14 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 </section>
 
+## Assignment 4 | Due 2019-02-20 by 1700
+
+No reading.
+
+Submit a 2-page writen proposal, describing your final project _as if it already exists_. Include screenshots, diagrams, hand-drawn sketches, links to projects, videos and other media that insipires and/or informs your project. This is a writing assignment; Submit it as you would a reading response.
+
+Develop a preliminary sketch (that means running c++ code) that demonstrates some aspect of your final project. Push this to code to your repo as you would for a programming homework. Be prepared to demonstrate this sketch in class on the 21st.
+
 ## Assignment 3 | Due 2019-02-13 by 1700
 
 Implement a particle system starting with _example/particles-p0.cpp_:
