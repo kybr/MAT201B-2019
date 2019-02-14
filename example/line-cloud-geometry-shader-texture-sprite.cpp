@@ -44,6 +44,7 @@ layout (location = 0) out vec4 fragmentColor;
 void main() {
   // use the first 3 components of the color (xyz is rgb), but take the alpha value from the texture
   //
+  //fragmentColor = vec4(fragment.color.xyz, 1.0);
   fragmentColor = vec4(fragment.color.xyz, texture(alphaTexture, fragment.textureCoordinate));
 }
 )";
@@ -134,6 +135,8 @@ uniform sampler1D alphaTexture;
 layout (location = 0) out vec4 fragmentColor;
 
 void main() {
+  //fragmentColor = vec4(1.0, 1.0, 1.0, 1.0);
+  //fragmentColor = vec4(1.0, 1.0, 1.0, texture(alphaTexture, fragment.textureCoordinate));
   fragmentColor = vec4(fragment.color.xyz, texture(alphaTexture, fragment.textureCoordinate));
 }
 )";
@@ -247,7 +250,18 @@ struct AlloApp : App {
     // nav().pullBack(9);
   }
 
-  void onAnimate(double dt) override {}
+  void onAnimate(double dt) override {
+    timer += dt;
+    if (timer > 7) {
+      timer -= 7;
+      which++;
+      if (which >= mesh.vertices().size()) which = 0;
+    }
+    nav().faceToward(mesh.vertices()[which], Vec3d(0, 1, 0), 0.01);
+    nav().nudgeF(0.007);
+  }
+  int which = 0;
+  double timer = 0;
 
   void onDraw(Graphics& g) override {
     g.clear(0.23);
