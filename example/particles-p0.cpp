@@ -12,6 +12,7 @@ const char* vertex = R"(
 
 layout (location = 0) in vec3 vertexPosition;
 layout (location = 1) in vec4 vertexColor;
+layout (location = 2) in float vertexMass; // (0, 1)
 
 uniform mat4 al_ModelViewMatrix;
 uniform mat4 al_ProjectionMatrix;
@@ -139,6 +140,10 @@ struct AlloApp : App {
           Vec3f(rnd::uniformS(), rnd::uniformS(), rnd::uniformS()) *
           CLOUD_WIDTH);
       pointMesh.color(HSV(rnd::uniform(), 1.0, 1.0));
+
+      velocity.push_back(Vec3f(0));
+      mass.push_back(rnd::uniform(1.0f, 0.1f));
+      pointMesh.texCoord(mass.back());
     }
 
     // put your setup code here
@@ -156,7 +161,7 @@ struct AlloApp : App {
     for (int i = 0; i < vertex.size(); ++i) {
       vertex[i] +=
           Vec3f(rnd::uniformS(1.0f), rnd::uniformS(1.0f), rnd::uniformS(1.0f)) *
-          0.01;
+          0.002;
     }
 
     // for each pair (i,j)...
@@ -183,7 +188,22 @@ struct AlloApp : App {
     // 2. accumulate accellerations into velocities
     // 3. add drag forces to velocities
     // 4. accumulate velocity into position
+
+    // here's an example of automating the "camera" every few seconds, we choose
+    // a new point to investigate. at any given time, we move the viewer i.e.,
+    // nav() toward the point and reorient the viewer to face that point.
+    //
+    timer += dt;
+    if (timer > 7) {
+      timer -= 7;
+      which++;
+      if (which >= pointMesh.vertices().size()) which = 0;
+    }
+    nav().faceToward(pointMesh.vertices()[which], Vec3d(0, 1, 0), 0.01);
+    nav().nudgeF(0.007);
   }
+  int which = 0;
+  double timer = 0;
 
   void onDraw(Graphics& g) override {
     // you don't have to change anything in here

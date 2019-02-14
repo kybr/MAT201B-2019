@@ -5,9 +5,35 @@
 
 namespace processing {
 
+float dist(float x1, float y1, float x2, float y2) {
+  return (Vec2f(x1, y1) - Vec2f(x2, y2)).mag();
+}
+float dist(float x1, float y1, float z1, float x2, float y2, float z2) {
+  return (Vec2f(x1, y1, z1) - Vec2f(x2, y2, z2)).mag();
+}
+float lerp(float a, float b, float t) {  //
+  return (1 - t) * a + t * b;
+}
 float map(float value, float low, float high, float Low, float High) {
   return Low + (High - Low) * ((value - low) / (high - low));
 }
+float norm(float value, float start, float stop) {
+  return map(value, low, high, 0, 1).
+}
+float sq(float value) {  //
+  return value * value
+}
+float constrain(float value, float low, float high) {
+  if (value > high) return high;
+  if (value < low) return low;
+  return value;
+}
+
+// TBD
+// https://processing.org/reference/noise_.html
+// https://processing.org/reference/noiseDetail_.html
+// https://processing.org/reference/noiseSeed_.html
+//
 
 Graphics* g{nullptr};
 void initialize(Graphics& G) { g = &G; }
