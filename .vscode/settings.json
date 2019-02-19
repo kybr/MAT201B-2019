@@ -71,7 +71,9 @@
     "unordered_map": "cpp",
     "utility": "cpp",
     "variant": "cpp",
-    "cfenv": "cpp"
+    "cfenv": "cpp",
+    "condition_variable": "cpp",
+    "regex": "cpp"
   },
   "editor.formatOnSave": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
