@@ -270,19 +270,20 @@ struct AlloApp : App {
     //
     g.depthTesting(false);
     g.blending(true);
-    g.blendModeTrans();
-
-    pointTexture.bind();
-    g.shader(pointShader);
-    mesh.primitive(Mesh::POINTS);
-    g.draw(mesh);
-    pointTexture.unbind();
+    // g.blendModeTrans();
+    g.blendModeAdd();
 
     lineTexture.bind();
     g.shader(lineShader);
     mesh.primitive(Mesh::LINES);
     g.draw(mesh);
     lineTexture.unbind();
+
+    pointTexture.bind();
+    g.shader(pointShader);
+    mesh.primitive(Mesh::POINTS);
+    g.draw(mesh);
+    pointTexture.unbind();
   }
 };
 

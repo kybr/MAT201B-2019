@@ -25,9 +25,8 @@ int main(int argc, char* argv[]) {
     regex xyz_float(R"|(\s*(\S+)\s*,\s*(\S+)\s*,\s*(\S+)\s*)|");
     auto begin = sregex_iterator(line.begin(), line.end(), xyz_float);
     auto end = sregex_iterator();
-    for (sregex_iterator i = begin; i != end; ++i) {
-      smatch match = *i;
-      point.push_back({stof(match[1]), stof(match[2]), stof(match[3])});
+    for (auto p = begin; p != end; ++p) {
+      point.push_back({stof((*p)[1]), stof((*p)[2]), stof((*p)[3])});
     }
   }
 
