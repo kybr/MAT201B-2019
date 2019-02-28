@@ -12,13 +12,15 @@ For each programming assignment, submit your code by pushing it to your [Github]
 
 </section>
 
+
 ## Assignment 4 | Due 2019-02-20 by 1700
 
 No reading.
 
-Submit a 2-page writen proposal, describing your final project _as if it already exists_. Include screenshots, diagrams, hand-drawn sketches, links to projects, videos and other media that insipires and/or informs your project. This is a writing assignment; Submit it as you would a reading response.
+Submit a 2-page written proposal, describing your final project _as if it already exists_. Include screenshots, diagrams, hand-drawn sketches, links to projects, videos and other media that inspires and/or informs your project. This is a writing assignment; Submit it as you would a reading response.
 
 Develop a preliminary sketch (that means running c++ code) that demonstrates some aspect of your final project. Push this to code to your repo as you would for a programming homework. Be prepared to demonstrate this sketch in class on the 21st.
+
 
 ## Assignment 3 | Due 2019-02-13 by 1700
 
@@ -52,9 +54,11 @@ Study and work along with chapters 1 and 2 of [_The Nature of Code_] by Daniel S
 [_Processing_]: https://processing.org
 [mass-spring-two-dimension.cpp]: https://github.com/kybr/MAT201B-2019/blob/master/example/mass-spring-two-dimension.cpp
 
+
 ## Assignment X | Due always
 
 Study the examples in allolib. For each example in the `allolib/examples` folder, build and run the example, observe the output, and study the source code. Make lists of notes and questions to submit to me. If there is no assignment currently pending, then this is your assignment.
+
 
 ## Assignment 1 | Due 2019-01-28 by 1700
 
