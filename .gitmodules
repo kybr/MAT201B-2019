@@ -5,7 +5,7 @@
 	path = cuttlebone
 	url = https://github.com/kybr/cuttlebone
 [submodule "student/MAT201B"]
-	path = student/MAT201B
+	path = student/weidi
 	url = https://github.com/UNIBIUBIU/MAT201B
 [submodule "student/mitchell"]
 	path = student/mitchell
