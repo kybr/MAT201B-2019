@@ -7,3 +7,6 @@
 [submodule "student/MAT201B"]
 	path = student/MAT201B
 	url = https://github.com/UNIBIUBIU/MAT201B
+[submodule "student/mitchell"]
+	path = student/mitchell
+	url = https://github.com/Mitchell57/MAT201B-mblewis
