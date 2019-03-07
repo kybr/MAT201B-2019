@@ -1,0 +1,5 @@
+#!/bin/sh
+git add student/weidi
+git add student/mitchell
+git commit -m 'take new student work'
+git push
