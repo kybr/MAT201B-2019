@@ -1,5 +1,19 @@
 #!/bin/sh
+
+pushd student/weidi
+git pull
+popd
 git add student/weidi
+
+pushd student/mitchell
+git pull
+popd
 git add student/mitchell
+
+pushd student/yujnkm
+git pull
+popd
+git add student/yujnkm
+
 git commit -m 'take new student work'
 git push
