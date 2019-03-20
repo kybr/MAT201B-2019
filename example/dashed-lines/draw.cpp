@@ -20,7 +20,6 @@ struct AlloApp : App {
   ShaderProgram pointShader;
   ShaderProgram lineShader;
   Mesh dashed;
-  Mesh cross;
 
   void onCreate() override {
     lineShader.compile(slurp("../line-vertex.glsl"),

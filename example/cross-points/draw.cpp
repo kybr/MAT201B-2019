@@ -43,6 +43,14 @@ struct AlloApp : App {
   void onDraw(Graphics& g) override {
     g.clear(0.23);
 
+    // https://www.khronos.org/opengl/wiki/Face_Culling
+    // glFrontFace(GL_CCW);  // default
+    // glFrontFace(GL_CW);
+    // glEnable(GL_CULL_FACE);
+    // glCullFace(GL_FRONT);
+    // glCullFace(GL_BACK);
+    // glCullFace(GL_FRONT_AND_BACK);
+
     g.rotate(angle, 0, 1, 0);
 
     g.shader(pointShader);
