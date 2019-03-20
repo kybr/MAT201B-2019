@@ -5,16 +5,7 @@ using namespace al;
 #include <vector>
 using namespace std;
 
-string slurp(string fileName) {
-  fstream file(fileName);
-  string returnValue = "";
-  while (file.good()) {
-    string line;
-    getline(file, line);
-    returnValue += line + "\n";
-  }
-  return returnValue;
-}
+#include "helper.h"
 
 struct AlloApp : App {
   ShaderProgram pointShader;

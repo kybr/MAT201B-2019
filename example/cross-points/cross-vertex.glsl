@@ -3,7 +3,6 @@
 layout(location = 0) in vec3 vertexPosition;
 
 uniform mat4 al_ModelViewMatrix;
-uniform mat4 al_ProjectionMatrix;
 
 void main() {
   //
