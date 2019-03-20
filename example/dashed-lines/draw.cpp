@@ -27,28 +27,45 @@ struct AlloApp : App {
                        slurp("../line-geometry.glsl"));
     dashed.primitive(Mesh::LINES);
 
-    for (int z = 0; z < 10; z++) {
-      for (int i = 0; i < 2000; i++) {
-        dashed.vertex(
-            (i - 1000) / 100.0,
-            sin(sqrt(z) * 0.1 * (i - 1000)) / (0.1 * (i - 1000) / sqrt(z)),
-            (z - 5));
+    auto sinc = [](float f) {
+      if (f == 0) return 1.0f;
+      return sinf(f) / f;
+    };
+
+#if 0
+    for (int z = -20; z < 20; z++) {
+      Vec3f _(-2000 / 100.0,
+              2 * sinc(0.007 * sqrt(abs(z)) * -2000) / sqrt(abs(z)), z);
+      for (int i = -1999; i < 2000; i++) {
+        float f = sqrt(abs(z));
+        Vec3f v(i / 100.0, 2 * sinc(0.007 * f * i) / f, z);
+        dashed.vertex(_);
+        dashed.vertex(v);
+        _ = v;
       }
     }
+#else
+    for (int z = -20; z < 20; z++) {
+      for (int i = -2000; i < 2000; i++) {
+        float f = sqrt(abs(z));
+        Vec3f v(i / 100.0, 2 * sinc(0.007 * f * i) / f, z);
+        dashed.vertex(v);
+      }
+    }
+#endif
 
     nav().pos(0, 5, 17);
     nav().faceToward(Vec3d(0, 0, 0));
+
+    nav().pos(Vec3d(-17.100191, 1.498830, 8.387591));
+    nav().quat(Quatd(0.905471, -0.125915, -0.403678, -0.036204));
   }
-
-  double angle{0};
-
-  void onAnimate(double dt) override { angle += 0.1; }
 
   void onDraw(Graphics& g) override {
     g.clear(0.23);
-    g.rotate(angle, 0, 1, 0);
     g.shader(lineShader);
-    g.shader().uniform("strokeWeight", 0.007 + 0.006 * sin(angle));
+    g.shader().uniform("strokeWeight", 0.003);
+    g.shader().uniform("al_EyePosition", nav().pos());
     dashed.primitive(Mesh::LINES);
     g.draw(dashed);
   }

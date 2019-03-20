@@ -1,35 +1,33 @@
 #version 330
-// #version 400
 
 layout(lines) in;
 layout(triangle_strip, max_vertices = 4) out;
 
+uniform mat4 al_ModelViewMatrix;
 uniform mat4 al_ProjectionMatrix;
+uniform vec3 al_EyePosition;
 uniform float strokeWeight;
 
 void main() {
-  mat4 m = al_ProjectionMatrix;  // rename to make lines shorter
+  mat4 mv = al_ModelViewMatrix;
+  mat4 p = al_ProjectionMatrix;
+  vec3 e = al_EyePosition;
 
-  // al_ModelViewMatrix is already applied in the vertex shader
   vec4 a = gl_in[0].gl_Position;
   vec4 b = gl_in[1].gl_Position;
 
-  // does vec3(0.0, 0.0, 1.0) point at the eye in the coordinate system?
-  // we hope that this billboards; it seems to, but really?
-  // XXX i think that this is broken; it's just not quite right
-  vec4 d = vec4(normalize(cross(b.xyz - a.xyz, vec3(0.0, 0.0, 1.0))), 0.0) *
-           strokeWeight;
+  vec4 d = vec4(normalize(cross(b.xyz - a.xyz, b.xyz - e)) * strokeWeight, 0.0);
 
-  gl_Position = m * (a + d);
+  gl_Position = p * mv * (a + d);
   EmitVertex();
 
-  gl_Position = m * (a - d);
+  gl_Position = p * mv * (a - d);
   EmitVertex();
 
-  gl_Position = m * (b + d);
+  gl_Position = p * mv * (b + d);
   EmitVertex();
 
-  gl_Position = m * (b - d);
+  gl_Position = p * mv * (b - d);
   EmitVertex();
 
   EndPrimitive();
